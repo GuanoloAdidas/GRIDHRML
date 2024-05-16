@@ -6,13 +6,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 }
 
 body {
-	--color-text: #4800d4;
+	--color-text: #030303;
     --color-bg: #e8e8e8;
-    --color-link: #ec1752;
-    --color-link-hover: #eb1851;
+    --color-link: #c80c14;
+    --color-link-hover: #c80c14;
     --color-info: #272526;
     --grid-item-bg: #f1f1f1;
-    --color-close: #ec1752;
+    --color-close: #c80c14;
 	font-family: Futura, "futura-pt", sans-serif;
 	min-height: 100vh;
 	color: #57585c;
@@ -108,7 +108,7 @@ main {
 	font-size: 1rem;
 }
 .logo {
-    width: 100px; /* Ajusta el tamaño según lo que necesites */
+    width: 200px; /* Ajusta el tamaño según lo que necesites */
     position: absolute;
     top: 10px;
     left: 10px;
@@ -216,11 +216,11 @@ main {
 }
 
 .grid__item:nth-child(even) .grid__item-img {
-	transform: rotate3d(0,0,1,4deg);
+	transform: rotate3d(0,0,0deg);
 }
 
 .grid__item:nth-child(odd) .grid__item-img {
-	transform: rotate3d(0,0,1,-4deg);
+	transform: rotate3d(0,0,0deg);
 }
 
 .grid__item-title {
@@ -228,10 +228,10 @@ main {
 	position: absolute;
 	left: 0;
 	top: 0;
-	margin: 0 0 0 1rem;
+	margin: 0 0 0 2rem;
 	-webkit-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
-	transform: rotate(180deg);
+	transform: rotate(0deg);
 	transform-origin: 0 50%;
 }
 
@@ -338,18 +338,33 @@ main {
 }
 
 .content__close {
-	position: absolute;
-	top: 0.75rem;
-	left: 50%;
-	z-index: 10000;
-	transform: translateX(-50%);
-	background: none;
-	border: 0;
-	margin: 0;
-	padding: 0;
-	cursor: pointer;
-	color: var(--color-text);
+    position: fixed;
+    top: 10rem;
+    left: 22rem; /* Ajusta este valor según lo necesites */
+    z-index: 10000;
+    transform: none; /* Elimina el centrado horizontal */
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+    transition: border 0.3s ease, border-radius 0.3s ease, padding 0.3s ease;
 }
+
+.content__close img {
+    width: 100px; /* Ajusta el tamaño de la imagen según lo necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block;
+}
+
+.content__close:hover {
+    border: 5px solid #c80c14; /* Añade un borde cuando se pasa el cursor por encima */
+    border-radius: 50%; /* Redondea el borde para formar un círculo */
+    padding: 10px; /* Ajusta el padding para que el círculo rodee la imagen */
+}
+
+
 
 .content__close:focus {
 	outline: none;
