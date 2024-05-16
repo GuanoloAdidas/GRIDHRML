@@ -100,11 +100,20 @@ main {
 
 /* Header */
 .codrops-header {
-	position: relative;
+	position: absolute;
 	z-index: 100;
-	text-align: center;
+	top: 10px;
+    left: 10px;
+	text-align: left;
 	font-size: 1rem;
 }
+.logo {
+    width: 100px; /* Ajusta el tamaño según lo que necesites */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
 
 .codrops-header__title {
 	font-size: 1rem;
